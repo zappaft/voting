@@ -1,6 +1,6 @@
 defmodule Voting.Admin do
   @moduledoc """
-    Admin Schema
+  Admin Schema
   """
   use Ecto.Schema
   import Ecto.Changeset
@@ -8,6 +8,7 @@ defmodule Voting.Admin do
   schema "administrators" do
     field :email, :string, null: false
     field :name, :string, null: false
+    field :password, :string, virtual: true
     field :password_hash, :string, null: false
 
     timestamps()
